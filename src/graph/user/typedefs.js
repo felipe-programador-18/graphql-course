@@ -1,0 +1,17 @@
+import {gql } from "apollo-server"
+
+//create example if this page manage all type and resolvers
+//tips very interest, i need have only one query in my project!!
+// if me want more of one query i need use extend to extends my query!!
+
+export const useTypeDefs = gql`
+  extend type Query {
+    user:User!,
+    users: [User!]!
+    }
+
+  type User {
+    id:ID!
+    name:String!,
+  }     
+`;

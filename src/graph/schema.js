@@ -1,0 +1,22 @@
+import { ApolloServer,gql } from "apollo-server"
+import { useAnotherSolve } from "./post/anotheresolvers";
+import { useAnothertype } from "./post/anothertypedefs";
+import { useResolvers } from "./user/resolvers";
+import { useTypeDefs } from "./user/typedefs";
+
+//create example if this page manage all type and resolvers
+ const rootTypeDefs = gql`
+  type Query {
+        _empty : Boolean
+       }
+`;
+
+ const rootResolvers = {
+    Query: {
+       _empty: () => true,
+        
+    }
+ }
+
+export const typeDefs = [rootTypeDefs, useTypeDefs, useAnothertype ]
+export const resolvers = [rootResolvers, useResolvers, useAnotherSolve ]
