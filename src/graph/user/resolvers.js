@@ -1,27 +1,13 @@
-// this way resolvers my query
-//remind all typedefs needs resolvers!!
+import fetch from "node-fetch"
 
-const  users = () => {
-    return [
-     {
-        id: "3",
-        name:"Felipe Programmer 18",
-     
-     },
-     
-     {  id:'1',
-        name:"Programmer Felipe",
-      
-     },
-    
-    ]
+const  users = async () => {
+  const users = await fetch("http://localhost:3000/users")
+    return users.json();
 }
 
-const user = () => {
-    return {
-        id: 32323,
-        name:"Felipe Programmer 18",
-    }
+const user = async () => {
+    const user = await fetch("http://localhost:3000/users")
+    return user.json()
 }
 
 
