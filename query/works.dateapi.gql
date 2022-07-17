@@ -1,0 +1,89 @@
+#this is part of resolvers!!
+const post = () => {
+    return {
+        id:'21',
+        title:"create machine another package of create bottle",
+        body:"fdsafdsaf",
+        indexRef: 323,
+        createdAt:"2020102-fdsafdsf",
+    }
+
+}
+
+const posts = () => {
+    return [{
+        id:'21',
+        title:"create machine learning",
+        body:"fdafd",
+        indexRef: 323,
+        createdAt:"2020102-fdsafdsf"
+    },{
+        id:'213',
+        title:"machine learning",
+        body:"fdafd",
+        indexRef: 323,
+        createdAt:"2020102-fdsafdsf"
+    }, {
+        id:'21',
+        title:"create machine another package of create bottle",
+        body:"fdafd",
+        indexRef: 323,
+        createdAt:"2020102-fdsafdsf",
+    },
+    
+    {
+        id:'21',
+        title:"create machine another package of create bottle",
+        body:"fdaf",
+        indexRef: 323,
+        createdAt:"2020102-fdsafdsf",}
+
+
+
+
+
+
+]
+}
+
+
+export const useAnotherSolve = {
+    Query:{
+        post,
+        posts
+    }
+}
+
+#/////////////////////////////////////////////////////
+
+# this is my typedefs remind i all type needs resolvers!!
+
+#import { gql } from "apollo-server";
+
+#//create another typedefs simulating get another date!!
+
+export const useAnothertype = gql`
+  extend  type Query {
+        post: Post!,
+        posts:[Post!]!  
+      }
+    
+    type Post {
+    id:ID!,
+    title: String!,
+    body:String!,
+    #userId: Int!,
+    indexRef: Int!,
+    createdAt:String!
+    }
+`;
+
+
+/*  {
+    "id": "860",
+    "title": "Et voluptatem nulla omnis et iusto ullam.",
+    "body": "Ad non pariatur. Aut molestias accusamus et inventore sunt voluptates non doloremque illum. Perspiciatis et provident vel et fugiat dolores ut. Quos quibusdam impedit cupiditate quia at eaque quae.",
+    "userId": "29",
+    "indexRef": 10,
+    "createdAt": "2018-08-10T23:41:51.714Z"
+  }, */
