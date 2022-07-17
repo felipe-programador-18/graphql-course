@@ -1,0 +1,19 @@
+import {ApolloServer} from 'apollo-server'
+import { resolvers, typeDefs } from './graph/schema'
+import fetch from "node-fetch"
+
+
+const callApollo = new ApolloServer({
+   typeDefs,
+   resolvers,
+   
+   context: () => {
+    return {
+      fetch,
+    };
+  },
+})
+
+callApollo.listen(4003).then(({url}) => {
+    console.log(`LISTENING ANOTHER SERVER TO PRACTICE MORE AND MORE ABOUT GRAPHQL ${url}  `)
+})
