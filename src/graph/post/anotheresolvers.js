@@ -38,11 +38,6 @@ const posts = () => {
         indexRef: 323,
         createdAt:"2020102-fdsafdsf",}
 
-
-
-
-
-
 ]
 }
 
