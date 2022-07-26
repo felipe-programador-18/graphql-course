@@ -1,4 +1,4 @@
-import { gql } from "apollo-server"
+import {  gql } from "apollo-server"
 import { useAnotherSolve } from "./post/anotheresolvers";
 import { useAnothertype } from "./post/anothertypedefs";
 import { useResolvers } from "./user/resolvers";
