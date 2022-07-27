@@ -1,13 +1,12 @@
 
-
-const  users = async(_, __, {fetch}) => { 
-  const users = await fetch("http://localhost:3000/users")
+const  users = async(_, __, { getUsers }) => { 
+  const users = await getUsers()
   return users.json();
 }
 
-const user = async (_, {id}, { fetch }) => {
-  console.log(fetch)
-  const response = await fetch("http://localhost:3000/users/" + id)
+const user = async (_, {id}, { getUsers }) => {
+
+  const response = await getUsers('/' + id)
   const user = await response.json()
   //console.log(user)
   return user;
@@ -16,7 +15,7 @@ const user = async (_, {id}, { fetch }) => {
 
 export const useResolvers = {
    Query: {
-      user,
-      users
+      users,
+      user
     } 
 }
