@@ -1,16 +1,11 @@
 import { ApolloServer} from 'apollo-server'
 import { resolvers, typeDefs } from './graph/schema'
-import fetch from "node-fetch"
+import { context } from './graph/context'
 // here i tick server apollo
 const server = new ApolloServer({
   typeDefs,
   resolvers,
-  context: () => {
-    return {
-      fetch,
-     
-    }
-  }
+  context, 
 })
 
 server.listen(4003).then(({url}) => {
