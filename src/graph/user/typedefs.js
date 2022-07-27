@@ -4,9 +4,6 @@ import {gql } from "apollo-server"
 //tips very interest, i need have only one query in my project!!
 // if me want more of one query i need use extend to extends my query!!
 
-
-
-
 export const useTypeDefs = gql`
   extend type Query {
     user (id: ID!) :User!,
