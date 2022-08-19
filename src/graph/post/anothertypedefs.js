@@ -14,7 +14,8 @@ export const useAnothertype = gql`
     body:String!,
     #userId: Int!,
     indexRef: Int!,
-    createdAt:String!
+    createdAt:String!,
+    newrules:String!
     }
 `;
 
