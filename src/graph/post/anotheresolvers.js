@@ -10,10 +10,11 @@ const posts = async (_,__, {getPosts}) => {
     
 }
 
-
+ 
 export const useAnotherSolve = {
-    Query:{
-        post,
-        posts
-    }
+    Query:{ post,posts },
+    Post: { newrules: (parent) => {
+        console.log("here inside my parameter!!!", parent.id)
+        return Math.random();
+    }  }
 }
