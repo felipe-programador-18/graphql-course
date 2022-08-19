@@ -4,7 +4,7 @@ import { gql } from "apollo-server";
 
 export const useAnothertype = gql`
   extend  type Query {
-        post: Post!,
+        post(id:ID!) : Post!,
         posts:[Post!]!  
       }
     
