@@ -4,7 +4,8 @@ const  users = async(_, __, { getUsers }) => {
   return users.json();
 }
 
-const user = async (_, {id}, { getUsers }) => {
+const user = async (_, {id,firstName}, { getUsers }) => {
+  console.log("first name here", firstName)
 
   const response = await getUsers('/' + id)
   const user = await response.json()
